@@ -1,0 +1,14 @@
+create database siva;
+
+use sivs;
+
+CREATE TABLE todoapp (
+    ID INT PRIMARY KEY,
+    DATE DATE NOT NULL,
+    TIME TIME NOT NULL,
+    TASK VARCHAR(255) NOT NULL
+);
+
+
+INSERT INTO todoapp (ID, DATE, TIME, TASK)
+VALUES (1, '2024-10-25', '14:00:00', 'Complete Flask TODO application');

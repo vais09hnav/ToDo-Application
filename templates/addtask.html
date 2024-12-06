@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Add New Task</h1>
+    <form action="{{ url_for('addtask') }}" method="POST">
+        <input type="text" name="ID" placeholder="Enter task ID" required>
+        <input type="date" name="DATE" required>
+        <input type="time" name="TIME" required>
+        <input type="text" name="TASK" placeholder="Enter task" required>
+        <button type="submit">Add Task</button>
+    </form>
+    <a class="back" href="{{ url_for('home') }}">Back to Home</a>
+</body>
+</html>

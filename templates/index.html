@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO Application</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>TODO Application</h1>
+    <hr>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Task</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        {% for data in datas %}
+        <tr>
+            <td>{{ data.ID }}</td>
+            <td>{{ data.DATE }}</td>
+            <td>{{ data.TIME }}</td>
+            <td>{{ data.TASK }}</td>
+            <td><a href="{{ url_for('deletetask', id=data.ID) }}" class="delete-btn">Delete</a></td>
+            <td><a href="{{ url_for('edittask', id=data.ID) }}">Edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <div class="add-task-container">
+        <a href="{{ url_for('addtask') }}" class="add-task-btn">Add Task</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
